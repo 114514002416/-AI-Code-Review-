@@ -1,14 +1,16 @@
-# AICR — 开源 AI Code Review（LLM + 启发式）
+Metadata-Version: 2.4
+Name: aicr
+Version: 0.1.0
+Summary: Open-source AI Code Review CLI and GitHub Action
+Author: Open-Source Contributors
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31.0
+Requires-Dist: PyYAML>=6.0.1
 
-[![Release](https://img.shields.io/github/v/release/114514002416/-AI-Code-Review-?sort=semver)](https://github.com/114514002416/-AI-Code-Review-/releases)
-[![GitHub Action](https://img.shields.io/badge/GitHub%20Action-AI%20Code%20Review-blue)](https://github.com/marketplace?type=actions&query=ai+code+review)
-[![License](https://img.shields.io/badge/License-Open--Source-green)](#)
+# AICR — 开源 AI Code Review
 
-AICR 是一个开源的 AI 代码审查工具：本地作为 CLI 使用，或在 GitHub 中作为 Composite Action 运行。内置静态启发式检查，可选接入 LLM（OpenAI 兼容/本地 Ollama）生成更高质量的审查建议。
-
-面向搜索引擎与 Marketplace 发现的关键词（SEO/Discoverability）：
-- AI Code Review, PR Review, GitHub Action, LLM, OpenAI, Ollama, GPT-4o, Code Quality, Static Analysis, Security, SAST
-- 代码审查, PR 审查, 静态分析, 安全扫描, 密钥泄露, 可维护性, 自动化, GitHub Actions
+AICR 是一个开源的代码审查工具：在本地作为 CLI 使用，或在 GitHub 中作为 Composite Action 运行。它包含可用的静态启发式检查，并可选接入 LLM（OpenAI 兼容/本地 Ollama）产生更高质量的建议。
 
 ## 功能特性
 - 启发式检查：TODO/FIXME、`eval/exec`、`subprocess(..., shell=True)`、不安全 `pickle` 反序列化、疑似密钥、过长函数块等
@@ -49,7 +51,7 @@ jobs:
 		runs-on: ubuntu-latest
 		steps:
 			- uses: actions/checkout@v4
-			- uses: 你的组织/你的仓库@v1 # 推荐使用版本标签；若在同仓库根目录可改用 ./
+			- uses: 你的组织/你的仓库@main # 或者 uses: ./（如果放在同仓库根目录）
 				with:
 					github-token: ${{ secrets.GITHUB_TOKEN }}
 					use-llm: false
@@ -68,21 +70,6 @@ Action 输入参数：
 如果启用 LLM，请在仓库 Secrets 配置：
 - `OPENAI_API_KEY` 或 `AICR_API_KEY`
 
-### 提升 Marketplace 与搜索可见性
-- 设置仓库 Topics（强烈推荐）：`ai`, `code-review`, `github-actions`, `static-analysis`, `security`, `llm`, `openai`, `ollama`
-	- 可使用命令（需要 gh 登录）：
-		```bash
-		gh repo edit --add-topic ai --add-topic code-review --add-topic github-actions \
-			--add-topic static-analysis --add-topic security --add-topic llm --add-topic openai --add-topic ollama
-		```
-- 创建稳定版本标签并指向最新发布：
-	```bash
-	git tag v0.1.0 && git push origin v0.1.0
-	git tag -f v1 && git push -f origin v1  # 永远指向最新稳定
-	```
-- 在 Releases 中撰写清晰的「What’s New」与关键字。
-- README 顶部保留清晰关键词与使用示例（已完成）。
-
 ## 设计与范围
 - 先以启发式保证“即装即用”，LLM 作为可选增强
 - 暂以单条 PR 评论汇总，后续可扩展成逐文件/逐行注释
@@ -100,7 +87,3 @@ aicr --help
 ```
 
 欢迎提 Issue / PR 共同改进。
-
----
-
-如果希望英文读者也能快速发现，建议同步查看与传播 [README.en.md](README.en.md)。

@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+aicr/__init__.py
+aicr/action_main.py
+aicr/cli.py
+aicr/diff.py
+aicr/github_api.py
+aicr/heuristics.py
+aicr/llm.py
+aicr/review.py
+aicr.egg-info/PKG-INFO
+aicr.egg-info/SOURCES.txt
+aicr.egg-info/dependency_links.txt
+aicr.egg-info/entry_points.txt
+aicr.egg-info/requires.txt
+aicr.egg-info/top_level.txt

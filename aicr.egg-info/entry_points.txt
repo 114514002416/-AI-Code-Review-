@@ -1,0 +1,2 @@
+[console_scripts]
+aicr = aicr.cli:main
