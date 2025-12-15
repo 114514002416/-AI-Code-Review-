@@ -1,5 +1,9 @@
 # AICR — 开源 AI Code Review（LLM + 启发式）
 
+<p align="center">
+	<img src="assets/aicr-logo.svg" alt="AICR: AI Code Review (LLM + Heuristics)" width="520" />
+</p>
+
 [![Release](https://img.shields.io/github/v/release/114514002416/-AI-Code-Review-?sort=semver)](https://github.com/114514002416/-AI-Code-Review-/releases)
 [![GitHub Action](https://img.shields.io/badge/GitHub%20Action-AI%20Code%20Review-blue)](https://github.com/marketplace?type=actions&query=ai+code+review)
 [![License](https://img.shields.io/badge/License-Open--Source-green)](#)
