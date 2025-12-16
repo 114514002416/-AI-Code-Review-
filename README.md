@@ -8,6 +8,13 @@
 [![GitHub Action](https://img.shields.io/badge/GitHub%20Action-AI%20Code%20Review-blue)](https://github.com/marketplace?type=actions&query=ai+code+review)
 [![License](https://img.shields.io/badge/License-Open--Source-green)](#)
 
+## 语言构成
+
+详见 [LANGUAGES.md](./LANGUAGES.md)。
+
+![Python 98.6%](https://img.shields.io/badge/Python-98.6%25-3776AB?logo=python&logoColor=white)
+![Shell 1.4%](https://img.shields.io/badge/Shell-1.4%25-89e051?logo=gnu-bash&logoColor=white)
+
 AICR 是一个开源的 AI 代码审查工具：本地作为 CLI 使用，或在 GitHub 中作为 Composite Action 运行。内置静态启发式检查，可选接入 LLM（OpenAI 兼容/本地 Ollama）生成更高质量的审查建议。
 
 面向搜索引擎与 Marketplace 发现的关键词（SEO/Discoverability）：
